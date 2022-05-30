@@ -1,0 +1,99 @@
+.container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: fit-content;
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.btn {
+  width: 206px;
+  height: 40px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--color-primary-white);
+  text-transform: uppercase;
+  border: none;
+}
+
+.white {
+  background-color: var(--color-primary-white);
+}
+
+.red {
+  background-color: var(--color-primary-red);
+}
+
+.pink {
+  background-color: var(--color-primary-pink);
+}
+
+.orange {
+  background-color: var(--color-primary-orange);
+}
+
+.yellow {
+  background-color: var(--color-primary-yellow);
+}
+
+.light-green {
+  background-color: var(--color-primary-lightgreen);
+}
+
+.green {
+  background-color: var(--color-primary-green);
+}
+
+.light-blue {
+  background-color: var(--color-primary-lightblue);
+}
+
+.dark-blue {
+  background-color: var(--color-primary-darkblue);
+}
+
+.fuschia {
+  background-color: var(--color-primary-fuschia);
+}
+
+.purple {
+  background-color: var(--color-primary-purple);
+}
+.aqua {
+  background-color: aqua;
+}
+
+.chartreuse {
+  background-color: chartreuse;
+}
+.blueviolet {
+  background-color: blueviolet;
+}
+.darksalmon {
+  background-color: darksalmon;
+}
+.darkseagreen {
+  background-color: darkseagreen;
+}
+.coral {
+  background-color: coral;
+}
+.aliceblue {
+  background-color: rgb(26, 81, 130);
+}
+
+.gold {
+  border: 2px solid;
+  border-color: 1px solid #dac1a0;
+  background-color: var(--color-primary-white);
+  color: var(--color-primary-gold);
+}

@@ -1,0 +1,125 @@
+.maincontainer {
+  display: flex;
+  flex-direction: column;
+  // max-width: 100vw;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.category__button {
+  width: 206px;
+  height: 40px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--color-primary-white);
+  background-color: var(--color-primary-gold);
+  text-transform: uppercase;
+  border: none;
+}
+
+.joketitle {
+  padding-left: 10px;
+  max-width: 240px;
+  //overflow: hidden;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #303030;
+  text-transform: uppercase;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: horizontal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.jokes__container {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  height: fit-content;
+  width: 80vw;
+  //max-width: 100vw;
+  //margin: 0 auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid;
+  height: 280px;
+  border-color: lightgray;
+  border-radius: 1px;
+  cursor: pointer;
+  max-height: fit-content;
+}
+
+.card:hover {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.jokebody {
+  width: 400px;
+  height: 154px;
+  margin: 6px 0 22px;
+  font-family: Montserrat;
+  font-size: 14px;
+  padding-top: 42px;
+  padding-bottom: 68px;
+  padding-left: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #303030;
+  max-width: 100vw;
+  display: block;
+  display: -webkit-box;
+  max-width: 100vw;
+
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 250px;
+}
+.title__container {
+  display: flex;
+  padding-top: 16px;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.arrowlink {
+  width: 20px;
+  height: 20px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--color-primary-gold);
+  padding-right: 20px;
+  font-family: Montserrat;
+  font-weight: 500;
+}

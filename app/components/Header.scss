@@ -1,0 +1,69 @@
+.header {
+  background-image: url(../assets/assets_Homework_Front-End_01/bitmap.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+
+  &__title {
+    width: 350px;
+    height: 72px;
+    // margin: 0 174px 0 57px;
+    font-family: Montserrat;
+    font-size: 48px;
+    color: #cfb995;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: #fff;
+    width: 350px;
+    font-size: 18px;
+    // margin: 0 174px 0 57px;
+    font-weight: 600;
+    font-family: Montserrat;
+    letter-spacing: 2.1px;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  flex-direction: row;
+
+  &__input {
+    margin-top: 20px;
+    width: 400px;
+    height: 40px;
+    background: transparent;
+    border-color: #fff;
+    background-image: url(../assets/assets_Homework_Front-End_01/search-copy.png);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-size: 20px 20px;
+    padding-right: 15px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  &__input::-webkit-input-placeholder {
+    text-align: left;
+    padding-left: 10px;
+    color: #f0f8ff;
+    opacity: 0.6;
+  }
+}
+
+.input-group-btn {
+  visibility: hidden;
+}
