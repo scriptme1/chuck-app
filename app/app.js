@@ -5,9 +5,10 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 
-import Jokes from './components/Jokes';
+import Jokess from './components/Jokess';
 import useFetch from './useFetch';
 import Pagination from './components/Pagination';
+import Paginate from './components/Paginate';
 
 function App() {
   const {
@@ -22,9 +23,8 @@ function App() {
       <Header />
 
       {isJokeLoading && <div>Loading...</div>}
-      {jokes && <Jokes jokes={jokes.result} />}
+      {jokes && <Jokess jokes={jokes.result} />}
       {errorJokeMessage && <div>{errorMessage}</div>}
-      <Pagination />
     </Router>
   );
 }

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Pagination.scss';
 const Pagination = ({ jokesPerPage, totalJokes, paginate }) => {
-  const pageNumbers = [];
+  const [pageNumbers, setpageNumber] = useState([]);
 
-  for (let i = 1; i <= Math.ceil(totalJokes / jokesPerPage); i++) {
-    pageNumbers.push(i);
-  }
+  // useEffect(() => {
+  //   for (let i = 1; i <= Math.ceil(totalJokes / jokesPerPage); i++) {
+  //     pageNumbers.push(i);
+  //   }
+  // }, [totalJokes, jokesPerPage]);
 
   return (
     <div class="b-pagination-outer">

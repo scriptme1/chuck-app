@@ -25,6 +25,11 @@
   border: none;
 }
 
+.btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
 .white {
   background-color: var(--color-primary-white);
 }
