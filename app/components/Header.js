@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-function Header() {
+function Header({ onChange, query }) {
   return (
     <>
       <div className="header">
@@ -14,6 +14,8 @@ function Header() {
               name="srch-term"
               id="srch-term"
               type="text"
+              onChange={onChange}
+              query={query}
             />
             <div className="input-group-btn">
               <button className="btn" type="submit">

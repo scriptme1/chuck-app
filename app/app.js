@@ -17,13 +17,19 @@ function App() {
     errorMessage: errorJokeMessage,
   } = useFetch('https://api.chucknorris.io/jokes/search?query=all');
 
+  const [query, setQuery] = useState('');
+
+  const searchWord = e => {
+    setQuery(e.target.value);
+    //console.log(query);
+  };
   return (
     <Router>
       <Navbar />
-      <Header />
+      <Header onChange={searchWord} query={query} />
 
       {isJokeLoading && <div>Loading...</div>}
-      {jokes && <Jokess jokes={jokes.result} />}
+      {jokes && <Jokess jokes={jokes.result} query={query} />}
       {errorJokeMessage && <div>{errorMessage}</div>}
     </Router>
   );

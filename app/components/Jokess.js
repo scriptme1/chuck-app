@@ -4,7 +4,7 @@ import './Jokes.scss';
 import Category from './Category';
 import Paginate from './Paginate';
 
-function Jokes({ jokes }) {
+function Jokes({ jokes, query }) {
   const [currentPage, setcurrentPage] = useState(1);
   const [jokesPerPage, setjokesPerPage] = useState(15);
 
@@ -13,9 +13,11 @@ function Jokes({ jokes }) {
   const [minPageNumberLimit, setminPageNumberLimit] = useState(0);
   const [filter, setFilter] = useState('all');
 
-  function jokesFiltered(filter) {
+  function jokesFiltered(filter, searchTerm) {
     if (filter === 'all') {
-      return jokes;
+      if (searchTerm === '') {
+        return jokes;
+      } else return jokes.filter(joke => joke.value.includes(searchTerm));
     } else if (filter === 'uncategorized') {
       return jokes.filter(joke => joke.categories == '');
     } else if (filter === 'explicit') {
@@ -77,21 +79,25 @@ function Jokes({ jokes }) {
 
   const indexOfLastJoke = currentPage * jokesPerPage;
   const indexOfFirstJoke = indexOfLastJoke - jokesPerPage;
-  const currentJokes = jokesFiltered(filter).slice(
+
+  useEffect(() => {
+    jokesFiltered(filter, query);
+    //console.log(query);
+  }, [filter, query]);
+
+  const currentJokes = jokesFiltered(filter, query).slice(
     indexOfFirstJoke,
     indexOfLastJoke
   );
 
   //Change Page
 
-  //const paginate = pageNumber => setCurrentPage(pageNumber);
-
   let paginate = null;
-  if (jokesFiltered(filter).length > 15) {
+  if (jokesFiltered(filter, query).length > 15) {
     paginate = (
       <Paginate
         jokesPerPage={jokesPerPage}
-        totalJokes={jokesFiltered(filter).length}
+        totalJokes={jokesFiltered(filter, query).length}
         handleClick={handleClick}
         handleNextbtn={handleNextbtn}
         handlePrevbtn={handlePrevbtn}
@@ -102,6 +108,7 @@ function Jokes({ jokes }) {
       />
     );
   }
+
   return (
     <>
       <div className="maincontainer">
