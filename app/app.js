@@ -7,8 +7,8 @@ import Header from './components/Header';
 
 import Jokess from './components/Jokess';
 import useFetch from './useFetch';
-import Pagination from './components/Pagination';
-import Paginate from './components/Paginate';
+// import Pagination from './components/Pagination';
+// import Paginate from './components/Paginate';
 
 function App() {
   const {
@@ -21,15 +21,18 @@ function App() {
 
   const searchWord = e => {
     setQuery(e.target.value);
-    //console.log(query);
+    // console.log(query);
   };
+
   return (
     <Router>
       <Navbar />
       <Header onChange={searchWord} query={query} />
 
       {isJokeLoading && <div>Loading...</div>}
-      {jokes && <Jokess jokes={jokes.result} query={query} />}
+      {jokes && (
+        <Jokess jokes={jokes.result} query={query} setQuery={setQuery} />
+      )}
       {errorJokeMessage && <div>{errorMessage}</div>}
     </Router>
   );

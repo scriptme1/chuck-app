@@ -20,32 +20,8 @@ function Jokes({ jokes, query }) {
       } else return jokes.filter(joke => joke.value.includes(searchTerm));
     } else if (filter === 'uncategorized') {
       return jokes.filter(joke => joke.categories == '');
-    } else if (filter === 'explicit') {
-      return jokes.filter(joke => joke.categories == 'explicit');
-    } else if (filter === 'movie') {
-      return jokes.filter(joke => joke.categories == 'movie');
-    } else if (filter === 'music') {
-      return jokes.filter(joke => joke.categories == 'music');
-    } else if (filter === 'dev') {
-      return jokes.filter(joke => joke.categories == 'dev');
-    } else if (filter === 'history') {
-      return jokes.filter(joke => joke.categories == 'history');
-    } else if (filter === 'celebrity') {
-      return jokes.filter(joke => joke.categories == 'celebrity');
-    } else if (filter === 'food') {
-      return jokes.filter(joke => joke.categories == 'food');
-    } else if (filter === 'religion') {
-      return jokes.filter(joke => joke.categories == 'religion');
-    } else if (filter === 'sport') {
-      return jokes.filter(joke => joke.categories == 'sport');
-    } else if (filter === 'money') {
-      return jokes.filter(joke => joke.categories == 'money');
-    } else if (filter === 'science') {
-      return jokes.filter(joke => joke.categories == 'science');
-    } else if (filter === 'career') {
-      return jokes.filter(joke => joke.categories == 'career');
-    } else if (filter === 'political') {
-      return jokes.filter(joke => joke.categories == 'political');
+    } else {
+      return jokes.filter(joke => joke.categories == `${filter}`);
     }
   }
 
@@ -163,3 +139,39 @@ function Jokes({ jokes, query }) {
 }
 
 export default Jokes;
+
+// function jokesFiltered(filter, searchTerm) {
+//   if (filter === 'all') {
+//     if (searchTerm === '') {
+//       return jokes;
+//     } else return jokes.filter(joke => joke.value.includes(searchTerm));
+//   } else if (filter === 'uncategorized') {
+//     return jokes.filter(joke => joke.categories == '');
+//   } else if (filter === 'explicit') {
+//     return jokes.filter(joke => joke.categories == 'explicit');
+//   } else if (filter === 'movie') {
+//     return jokes.filter(joke => joke.categories == 'movie');
+//   } else if (filter === 'music') {
+//     return jokes.filter(joke => joke.categories == 'music');
+//   } else if (filter === 'dev') {
+//     return jokes.filter(joke => joke.categories == 'dev');
+//   } else if (filter === 'history') {
+//     return jokes.filter(joke => joke.categories == 'history');
+//   } else if (filter === 'celebrity') {
+//     return jokes.filter(joke => joke.categories == 'celebrity');
+//   } else if (filter === 'food') {
+//     return jokes.filter(joke => joke.categories == 'food');
+//   } else if (filter === 'religion') {
+//     return jokes.filter(joke => joke.categories == 'religion');
+//   } else if (filter === 'sport') {
+//     return jokes.filter(joke => joke.categories == 'sport');
+//   } else if (filter === 'money') {
+//     return jokes.filter(joke => joke.categories == 'money');
+//   } else if (filter === 'science') {
+//     return jokes.filter(joke => joke.categories == 'science');
+//   } else if (filter === 'career') {
+//     return jokes.filter(joke => joke.categories == 'career');
+//   } else if (filter === 'political') {
+//     return jokes.filter(joke => joke.categories == 'political');
+//   }
+// }
